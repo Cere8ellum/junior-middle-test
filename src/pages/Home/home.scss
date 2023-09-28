@@ -1,0 +1,76 @@
+.dialogContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #777;
+}
+
+.dialog {
+    background-color: #fff;
+    max-height: 500px;
+    max-width: 350px;
+    // Дополнение для поциционирования
+    margin: 10% auto;
+    
+
+    &__header {
+        background-color: #ddd;
+        // Дополнение
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__headerTitleContainer {
+        // Дополнение
+        overflow: auto
+    }
+
+    &__headerTitle {
+        // Дополнение
+        white-space: nowrap; // Текст не переносится 
+        overflow: hidden;
+        text-overflow: ellipsis; // Многоточие
+    }
+
+    &__headerButton {
+        // Дополнение
+        white-space: nowrap;
+    }
+
+    &__content {
+        // Дополнение
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__contentBlock {
+        &_left {
+            width: 30%;
+            border-right: 1px solid #ccc;
+        }
+
+        &_right {
+            width: 70%;
+            // Дополнение
+            height: 320px;
+            overflow-y: scroll
+        }
+    }
+
+    &__footer {
+        background-color: #ddd;
+        // Дополнение
+        text-align:center;
+        overflow-wrap: break-word;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+}
